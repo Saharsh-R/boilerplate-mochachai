@@ -62,7 +62,7 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
-Browser.localhost('localhost', process.env.PORT || 3000);
+Browser.site = 'https://boilerplate-mochachai.saharshr.repl.co'; 
 suite("Functional Tests with Zombie.js", function () {
   const browser = new Browser();
 
@@ -83,7 +83,7 @@ suite("Functional Tests with Zombie.js", function () {
     });
     // #6
     test('submit "surname" : "Vespucci" - write your e2e test...', function (done) {
-      // assert.fail();
+      assert.fail();
 
       done();
     });
